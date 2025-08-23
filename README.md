@@ -1,4 +1,4 @@
-**# flask-app-ecs
+**# flask-app-ecs**
 
 Flask App – DevOps Zero To Hero (Junoon Batch 9)
 
@@ -6,13 +6,14 @@ A simple Flask web application containerized with Docker.
 This project demonstrates running a Python web app inside a container with health checks.
 
 **Project Structure
-.
-├── app.py             # Flask app with routes
-├── run.py             # Entry point to start Flask
-├── requirements.txt   # Python dependencies
-├── Dockerfile         # Docker image definition
 
-**Features
+- .
+- ├── app.py             # Flask app with routes
+- ├── run.py             # Entry point to start Flask
+- ├── requirements.txt   # Python dependencies
+- ├── Dockerfile         # Docker image definition
+
+**Features**
 
 -  Flask web app with a welcome route (/)
 
@@ -22,14 +23,16 @@ This project demonstrates running a Python web app inside a container with healt
 
 -  Exposes port 80 for external access
 
-**Tech Stack
 
-Python 3.9
-Flask 2.2.2
-Werkzeug 2.2.2
-Docker
+**Tech Stack**
 
-▶️ **Running Locally
+- Python 3.9
+- Flask 2.2.2
+- Werkzeug 2.2.2
+- Docker
+
+
+**Running Locally**
 
 1. Clone the repository
 
@@ -48,10 +51,11 @@ pip install -r requirements.txt
 python run.py
 
 
-**App will be available at 👉 http://localhost:80
+**App will be available at 👉 http://localhost:80**
 
 
-**🐳 Running with Docker
+
+**🐳 Running with Docker**
 
 1. Build Docker image
 docker build -t python-app:latest .
