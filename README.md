@@ -26,29 +26,29 @@ This project demonstrates running a Python web app inside a container with healt
 
 **Tech Stack**
 
-- Python 3.9
-- Flask 2.2.2
-- Werkzeug 2.2.2
-- Docker
+ - Python 3.9
+ - Flask 2.2.2
+ - Werkzeug 2.2.2
+ - Docker
 
 
 **Running Locally**
 
 1. Clone the repository
 
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+ - git clone https://github.com/<your-username>/<your-repo>.git
+ - cd <your-repo>
 
 2. Create a virtual environment (optional)
 
-python3 -m venv venv
-source venv/bin/activate   # On Windows use: venv\Scripts\activate
+ - python3 -m venv venv
+ - source venv/bin/activate   # On Windows use: venv\Scripts\activate
 
 3. Install dependencies
-pip install -r requirements.txt
+ - pip install -r requirements.txt
 
 4. Run the app
-python run.py
+ - python run.py
 
 
 **App will be available at 👉 http://localhost:80**
@@ -58,11 +58,11 @@ python run.py
 **🐳 Running with Docker**
 
 1. Build Docker image
-docker build -t python-app:latest .
+- docker build -t python-app:latest .
 
 2. Run container
-docker run -d -p 80:80 python-app
+- docker run -d -p 80:80 python-app
 
 3. Test the endpoints
-Home: http://localhost:80/
-Health: http://localhost:80/health
+- Home: http://localhost:80/
+- Health: http://localhost:80/health
