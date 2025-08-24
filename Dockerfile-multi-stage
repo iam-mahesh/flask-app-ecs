@@ -1,0 +1,43 @@
+# Stage 1
+
+FROM python:3.9-slim AS Builder
+
+# Working Directory
+
+WORKDIR /app
+
+# Copy the code from host to container 
+
+COPY . .
+
+# Install the dependencies
+
+RUN pip install -r requirements.txt --target /app/deps
+
+# Stage 2 ( Where we have just the code and the dependencies without linux distribution )
+
+FROM gcr.io/distroless/python3-debian12
+
+# Wroking Directory for distroless
+
+WORKDIR /app
+
+# Copied the dependencies installed in stage in from requirement.txt
+
+COPY --from=Builder /app/deps /app/deps
+
+#Copied the code 
+
+COPY --from=Builder /app . 
+
+# Environment Variable
+
+ENV PYTHONPATH="/app/deps"
+
+# Expose the port 
+
+EXPOSE  80
+
+# Serve the app and keep it running
+	
+CMD ["run.py"]

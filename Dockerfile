@@ -1,6 +1,6 @@
 #1 Base Image (OS)
 
-FROM python:3.9-slim
+FROM python:3.9
 
 #2 Working directory
 
